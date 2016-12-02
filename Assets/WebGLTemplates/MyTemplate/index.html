@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | %UNITY_WEB_NAME%</title>
+    <link rel="stylesheet" href="TemplateData/index.css">
+    <script src="TemplateData/Progress.js"></script>
+	<style>
+	
+	#progressBox{ background-color: %UNITY_CUSTOM_BACKGROUND_COLOR%; }
+
+	p, h1,h2,h3{ color: %UNITY_CUSTOM_TEXT_COLOR%; }
+	#progressBarBox{ background-color: %UNITY_CUSTOM_TEXT_COLOR%; }
+
+	a{ color: %UNITY_CUSTOM_HIGHLIGHT_COLOR%; }
+	#progressBar{ background-color: %UNITY_CUSTOM_HIGHLIGHT_COLOR%; }
+	
+	</style>
+  </head>
+  <body data-width="%UNITY_WIDTH%px" data-height="%UNITY_HEIGHT%px" data-name="%UNITY_WEB_NAME%">
+	<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+	<div id="progressBox">
+		<div id="progressContents">
+			<h3>a game by</h3>
+			<h2><a href="http://twitter.com/skslucher" target="_blank">@skslucher</a></h2>
+			<div id="progressBarBox">
+				<div id="progressBar"></div>
+			</div>
+			<p id="progressMessage">Loading</p>
+		</div>
+	</div>
+    %UNITY_WEBGL_LOADER_GLUE%
+  </body>
+</html>
+

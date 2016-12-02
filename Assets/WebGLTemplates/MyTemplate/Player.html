@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player</title>
+    <link rel="stylesheet" href="TemplateData/player.css">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+	<script>
+	  function loadUnityTags(obj) {
+		obj.style.width = obj.contentWindow.document.body.dataset.width;
+		obj.style.height = obj.contentWindow.document.body.dataset.height;
+		
+		document.getElementById('name').innerHTML = obj.contentWindow.document.body.dataset.name;
+	  }
+	</script>
+  </head>
+  <body>
+    <p class="header"><span>Unity WebGL Player</span></p>
+    <div class="player-wrap clear">
+	  <!--<iframe id="frame" src="index.html" height="540px" width="960px"></iframe>-->
+	  <iframe style="width:960px; height:540px" id="frame" src="index.html" onload="loadUnityTags(this)"></iframe>
+      <br>
+      <div class="logo"></div>
+      <!--<div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="fullscreen();" /></div>-->
+      <div class="title" id="name">name</div>
+    </div>
+    <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+  </body>
+</html>
